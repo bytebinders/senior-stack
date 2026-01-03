@@ -1,0 +1,14 @@
+{
+  "name": "senior-stack-server",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx index.ts",
+    "build": "tsx ../script/build.ts",
+    "start": "NODE_ENV=production node dist/index.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

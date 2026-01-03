@@ -1,0 +1,192 @@
+Act as a senior full-stack web developer.
+Build a simple, secure, cloud-hosted Crime Tracking Web Application.
+The system must avoid all third-party services that require API keys and must not be over-engineered.
+
+1. Project Goal
+
+Develop a basic but functional crime tracking system that allows crime reporting and case management in the cloud.
+This is a lightweight academic / demo-ready system, not an enterprise platform.
+
+2. Technology Stack (Strict – No API Keys)
+Frontend
+
+HTML, CSS, JavaScript (or React if needed, but keep it simple)
+
+Tailwind CSS for styling
+
+Fetch API or Axios for requests
+
+Hosted on Netlify or Vercel
+
+Backend
+
+Node.js + Express
+
+REST API
+
+Hosted on Render
+
+Database
+
+MongoDB Atlas (free tier)
+
+Mongoose ODM
+
+MongoDB Atlas uses a connection string, not an API key
+
+3. What the System MUST NOT Use
+
+🚫 No maps
+🚫 No Google services
+🚫 No Firebase
+🚫 No Cloudinary
+🚫 No email services
+🚫 No payment systems
+🚫 No AI
+🚫 No third-party APIs requiring keys
+
+4. Authentication (Simple & Local)
+
+Basic email + password login
+
+Password hashing with bcrypt
+
+JWT authentication using a locally generated secret
+
+Roles handled inside the database
+
+5. User Roles (Minimal)
+1. Reporter
+
+Submit crime reports
+
+View submitted reports
+
+Track report status
+
+2. Admin
+
+Login
+
+View all reports
+
+Update report status
+
+Delete fake or invalid reports
+
+6. Core Features (Only Essentials)
+Crime Reporting
+
+Crime title
+
+Description
+
+Category
+
+Date reported
+
+Auto-generated report ID
+
+Status (Pending / Reviewed / Closed)
+
+Case Management
+
+List of reports
+
+Status update
+
+Simple filters (by status or category)
+
+Dashboard
+
+Total reports
+
+Reports by status
+
+Recent reports list
+
+📌 No maps and no location visualization
+
+7. Database Schema (Simple)
+User
+
+name
+
+email
+
+password
+
+role
+
+createdAt
+
+CrimeReport
+
+reportId
+
+title
+
+description
+
+category
+
+status
+
+createdAt
+
+8. API Endpoints
+
+POST /auth/login
+
+POST /auth/register
+
+POST /reports
+
+GET /reports
+
+GET /reports/:id
+
+PUT /reports/:id/status
+
+DELETE /reports/:id
+
+All routes must be protected based on user role.
+
+9. Backend Folder Structure
+src/
+ ├─ routes/
+ ├─ controllers/
+ ├─ models/
+ ├─ middleware/
+ ├─ config/
+ └─ server.js
+
+10. Deployment Requirements
+
+Environment variables for database connection and JWT secret
+
+Backend deployed on Render
+
+Frontend deployed on Netlify or Vercel
+
+Clear setup instructions
+
+11. Expected Output
+
+The AI must provide:
+
+Full backend code
+
+Frontend pages
+
+MongoDB models
+
+Authentication logic
+
+Deployment steps
+
+README file
+
+Build the system clean, simple, and understandable.
+Avoid unnecessary complexity.
+No external API keys of any kind.
